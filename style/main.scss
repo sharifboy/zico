@@ -1,0 +1,15 @@
+// General styles
+@import "./variables/fonts";
+@import "./variables/variableS";
+@import "./variables/media-mixin";
+@import "./variables/mixins";
+@import "./variables/normalize";
+
+//  Components
+
+@import "./components/header-top";
+@import "./components/header-banner";
+@import "./components/established";
+@import "./components/info";
+@import "./components/lorem";
+@import "./components/footer";

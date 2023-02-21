@@ -1,0 +1,26 @@
+@mixin text {
+    color: $gray;
+    font-size: 14px;
+    line-height: 17px;
+
+    @include mediaMobileFirst(576) {
+        font-size: 12px;
+        line-height: 15px;
+    }
+}
+@mixin flexBetween {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flexAlignCenter {
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,86 @@
+.header {
+    background-color: #fff;
+    width: 100%;
+}
+
+.header-top {
+    @include flexBetween;
+    padding: 36px 0 25px;
+
+    @include mediaMobileFirst(600) {
+        padding-block: 20px;
+    }
+
+    &__logo {
+        font-size: 20px;
+        line-height: 24px;
+        color: $dark;
+        font-family: $InterRegular;
+    }
+
+    &__menu {
+        @include flexAlignCenter;
+        gap: 30px;
+
+        @include mediaMobileFirst (600) {
+            display: none;
+        }
+
+        &-links {
+            font-size: 16px;
+            line-height: 19px;
+            color: $dark;
+            transition: 0.5s;
+
+            &:hover {
+                color: $violet;
+            }
+        }
+    }
+}
+
+.burger-menu {
+    @include flexBetween;
+    flex-direction: column;
+    display: none;
+    gap: 5px;
+
+    @include mediaMobileFirst(600) {
+        display: flex;
+    }
+
+    & > div {
+        width: 30px;
+        height: 3px;
+        background-color: #000;
+    }
+
+}
+
+.search-form {
+    width: 128px;
+    height: 24px;
+    @include flexBetween;
+    gap: 11px;
+
+    &__label {
+        display: block;
+
+        &-icon {
+            display: block;
+        }
+    }
+
+    &__input {
+        width: 97px;
+        border: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    @include mediaMobileFirst (600) {
+       display: none; 
+    }
+}

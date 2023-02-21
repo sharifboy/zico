@@ -1,0 +1,74 @@
+.lorem {
+    margin-bottom: 43px;
+    
+    &-wrapper {
+        @include flexAlignCenter;
+        background-color: $antiquaWhite;
+
+        @include mediaMobileFirst (768) {
+            flex-direction: column;
+        }
+
+        &__info {
+            padding: 98px 69px 118px 63px;
+
+            @include mediaMobileFirst (768) {
+                padding: 40px;
+                text-align: center;
+            }
+
+            @include mobile{
+                padding-inline: 15px;
+            }
+
+            &-title {
+                font-size: 40px;
+                line-height: 48px;
+                max-width: 308px;
+                width: 100%;
+
+                @include mobile {
+                    font-size: 26px;
+                    line-height: 32px;
+                }
+            }
+
+            &-text {
+                @include text;
+                max-width: 311px;
+                width: 100%;
+                margin-block: 24px 31px;
+            }
+        }
+
+        &__img img {
+            max-width: 525px;
+            width: 100%;
+        }
+    }
+
+    &-btn {
+        gap: 8px;
+        color: #fff;
+        display: block;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 31px;
+        margin-left: auto;
+        line-height: 19px;
+        padding: 9px 11px;
+        @include flexBetween;
+        font-family: $InterBold;
+        transition: $transition;
+        background-color: $violet;
+        border: 1px solid $violet;
+        border-radius: $borderRadius;
+
+        @include mobile {
+            font-size: 13px;
+            padding: 7px 6px;
+            line-height: 15px;
+            margin: 30px auto 0;
+        }
+    }
+}
